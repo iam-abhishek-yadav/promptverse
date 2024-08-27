@@ -10,9 +10,8 @@ export const GET = async (request) => {
 		const responseBody = JSON.stringify(prompts);
 		const headers = {
 			'Content-Type': 'application/json',
-			'Cache-Control': 'public, max-age=0, must-revalidate',
+			'Cache-Control': 'no-store',
 			Pragma: 'no-cache',
-			Expires: '0',
 		};
 
 		return new Response(responseBody, { status: 200, headers });
